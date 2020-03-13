@@ -1,0 +1,1 @@
+insert into personas(id,nombres,apellidos,ci,email) values(12,'anghelo','muñoz',6174182,'anghelosieben13@gmail.com')
