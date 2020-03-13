@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="index::head">
+</head>
+<body>
+	<div>
+		<a th:href="@{'/persona/ver/' + ${persona.id}(format=pdf)}" class="btn btn-success">mostrar pdf</a>
+		<span>Nombres</span>
+		<span th:text="${persona.nombres}"></span>
+		<span>Apellidos</span>
+		<span th:text="${persona.apellidos}"></span>
+		<span>ci</span>
+		<span th:text="${persona.ci}"></span>
+		<img th:src="@{'/uploads/'+${persona.foto}}" th:if="${#strings.length(persona.foto)>0}">
+	</div>	
+</body>
+</html>

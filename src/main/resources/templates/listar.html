@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<link th:href="@{/bower_components/bootstrap/dist/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+	<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>id</th>
+			<th>nombres</th>			
+			<th>apellidos</th>
+			<th>ci</th>
+			<th>email</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="persona: ${personas} ">
+			<td th:text=${persona.id}></td>
+			<td th:text=${persona.nombres}></td>			
+			<td th:text=${persona.apellidos}></td>
+			<td th:text=${persona.ci}></td>
+			<td th:text=${persona.email}></td>
+		</tr>
+	</tbody>
+	</table>
+	</div>
+</body>
+</html>
